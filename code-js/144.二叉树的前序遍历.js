@@ -18,16 +18,37 @@
  * @return {number[]}
  */
 var preorderTraversal = function(root) {
+    // 1. 递归算法
+    // var res = []
+    // var preorder = function (node) {
+    //     if(!node) {
+    //         return
+    //     }
+    //     res.push(node.val)
+    //     preorder(node.left)
+    //     preorder(node.right)
+    // }
+    // preorder(root)
+    // return res
+    // 2. 迭代算法
     var res = []
-    var preorder = function (node) {
-        if(!node) {
-            return
-        }
-        res.push(node.val)
-        preorder(node.left)
-        preorder(node.right)
+    if (!root) {
+        return res
     }
-    preorder(root)
+    var stack = []
+    stack.push(root)
+    while(stack.length) {
+        var current = stack.pop()
+        res.push(current.val)
+
+        if(current.right) {
+            stack.push(current.right)
+        }
+
+        if(current.left) {
+            stack.push(current.left)
+        }
+    }
     return res
 };
 // @lc code=end
