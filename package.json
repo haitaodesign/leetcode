@@ -1,0 +1,16 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "数据结构与算法训练仓库",
+  "main": "count.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "count": "node count.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
