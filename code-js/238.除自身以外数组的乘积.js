@@ -16,7 +16,7 @@ var productExceptSelf = function(nums) {
     let answer = [];
 
     light[0] = 1;
-    for (let i = 0; i < length; i++) {
+    for (let i = 1; i < length; i++) {
         light[i] = nums[i-1] * light[i-1] 
         
     }
